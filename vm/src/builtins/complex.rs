@@ -206,7 +206,7 @@ impl PyComplex {
 impl PyComplex {
     #[pymethod(name = "__mod__")]
     fn mod_(&self, other: PyObjectRef, vm: &VirtualMachine) -> PyResult {
-        return Err(vm.new_type_error("can't mod complex numbers.".to_owned(),))
+        return Err(vm.new_type_error("can't mod complex numbers.".to_owned()));
     }
 
     #[pymethod(magic)]
